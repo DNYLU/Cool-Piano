@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CodePen - JavaScript Drum Kit</title>
+    <link rel="stylesheet" href="./styles.css">
+
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+    <main>
+        <section class="main-wrapper">
+            <div class="key-map-wrapper">
+                <h2>Key Mapping</h2>
+                <ul class="key-map-list">
+                    <li>
+                        <!-- kbd = To define keyboard input -->
+                        <kbd class="key-code">A</kbd>
+                        <span class="key-sound">C</span>
+                    </li>
+                    <li>
+                        <kbd class="key-code">S</kbd>
+                        <span class="key-sound">D</span>
+                    <li>
+                        <li>
+                            <kbd class="key-code">D</kbd>
+                            <span class="key-sound">E</span>
+                        <li>
+                        <kbd class="key-code">F</kbd>
+                        <span class="key-sound">F</span>
+                    </li>
+                    <li>
+                        <kbd class="key-code">G</kbd>
+                        <span class="key-sound">G</span>
+                    </li>
+                    <li>
+                        <kbd class="key-code">H</kbd>
+                        <span class="key-sound">A</span>
+                    </li>
+                    <li>
+                        <kbd class="key-code">J</kbd>
+                        <span class="key-sound">B</span>
+                    </li>
+                    <li>
+                        <kbd class="key-code">K</kbd>
+                        <span class="key-sound">C'</span>
+                    </li>
+                    <li>
+                        <kbd class="key-code">L</kbd>
+                        <span class="key-sound">D'</span>
+                    </li>
+                    <li>
+                        <kbd class="key-code">Æ</kbd>
+                        <span class="key-sound">E'</span>
+                    </li>
+                    <li>
+                        <kbd class="key-code">Ø</kbd>
+                        <span class="key-sound">F'</span>
+                    </li>
+                    <li>
+                        <kbd class="key-code">O</kbd>
+                        <span class="key-sound">G'</span>
+                    </li>
+                    <li>
+                        <kbd class="key-code">P</kbd>
+                        <span class="key-sound">A'</span>
+                    </li>
+                    <li>
+                        <kbd class="key-code">Å</kbd>
+                        <span class="key-sound">B'</span>
+                    </li>
+                </ul>
+            </div>
+            <h1 class="main-title">Cool Piano</h1>
+
+            <!--Piano wrapper-->
+            <div class="piano-wrapper">
+    
+                    <!--  Keycodes:  https://www.w3.org/2002/09/tests/keys.html-->
+                <div data-key="65" class="key c">
+                    <kbd>A</kbd>
+                </div>
+                <div data-key="83" class="key d">
+                    <kbd>S</kbd>
+                </div>
+                <div data-key="68" class="key e">
+                    <kbd>D</kbd>
+                </div>
+                <div data-key="70" class="key f">
+                    <kbd>F</kbd>
+                </div>
+                <div data-key="71" class="key g">
+                    <kbd>G</kbd>
+                </div>
+                <div data-key="72" class="key a">
+                    <kbd>H</kbd>
+                </div>
+                <div data-key="74" class="key b">
+                    <kbd>J</kbd>
+                </div>
+                <div data-key="75" class="key c2">
+                    <kbd>K</kbd>
+                </div>
+                <div data-key="76" class="key d2">
+                    <kbd>L</kbd>
+                </div>
+                <div data-key="192" class="key e2">
+                    <kbd>Æ</kbd>
+                </div>
+                <div data-key="222" class="key f2">
+                    <kbd>Ø</kbd>
+                </div>
+                <div data-key="79" class="key g2">
+                    <kbd>O</kbd>
+                </div>
+                <div data-key="80" class="key a2">
+                    <kbd>P</kbd>
+                </div>
+                <div data-key="221" class="key b2">
+                    <kbd>Å</kbd>
+                </div>
+
+                <img class="piano"
+                    src="http://www.piano-keyboard-guide.com/wp-content/uploads/2015/05/piano_keys_layout.png"
+                    alt="Piano Kit" />
+            </div>
+
+
+        </section>
+    </main>
+
+    <!-- "type="audio/mpeg"" er fordi at browseren ikke understøtter .mp3 -->
+    <audio data-key="65" type="audio/mpeg" src="../piano/resources/C.mp3"></audio>
+    <audio data-key="83" type="audio/mpeg" src="../piano/resources/D.mp3"></audio>
+    <audio data-key="68" type="audio/mpeg" src="../piano/resources/E.mp3"></audio>
+    <audio data-key="70" type="audio/mpeg" src="../piano/resources/F.mp3"></audio>
+    <audio data-key="71" type="audio/mpeg" src="../piano/resources/G.mp3"></audio>
+    <audio data-key="72" type="audio/mpeg" src="../piano/resources/A.mp3"></audio>
+    <audio data-key="74" type="audio/mpeg" src="../piano/resources/B.mp3"></audio>
+    <audio data-key="75" type="audio/mpeg" src="../piano/resources/C'.mp3"></audio>
+    <audio data-key="76" type="audio/mpeg" src="../piano/resources/D'.mp3"></audio>
+    <audio data-key="192" type="audio/mpeg" src="../piano/resources/E'.mp3"></audio>
+    <audio data-key="222" type="audio/mpeg" src="../piano/resources/F'.mp3"></audio>
+    <audio data-key="79" type="audio/mpeg" src="../piano/resources/G'.mp3"></audio>
+    <audio data-key="80" type="audio/mpeg" src="../piano/resources/A'.mp3"></audio>
+    <audio data-key="221" type="audio/mpeg" src="../piano/resources/B'.mp3"></audio>
+    <!-- partial -->
+    <script src="./app.js"></script>
+
+</body>
+
+</html>

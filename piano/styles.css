@@ -1,0 +1,160 @@
+@import url(https://fonts.googleapis.com/css?family=Handlee|Pacifico);
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+	background-color: black;
+}
+
+.main-wrapper {
+	margin: 30px auto 0;
+	width: 1080px;
+	text-align: center;
+	
+}
+
+.main-title {
+	font-family: 'Pacifico', cursive;
+	text-align: center;
+	font-size: 3.2em;
+	color: #cb2026;
+	text-shadow: 1px 1px 1px #5a0b0d;
+}
+
+.piano-wrapper {
+	position: relative;
+	width: 600px;
+	margin: 50px auto 0;
+}
+
+.piano {
+	width: 100%;
+	height: 520px;
+	position: relative;
+}
+
+
+
+.key {
+	display: inline-block;
+	transition: all ease-in-out .042s;
+	position: absolute;
+	background: #eaeaea;
+    font-size: 1.5em;
+    height: 32px;
+    width: 32px;
+    text-align: center;
+    border-radius: 4px;
+    border: 3px solid #aaa;
+    color: #444;
+    box-shadow: 1px 1px 1px rgba(0,0,0,.65);
+    z-index: 2;
+}
+
+.key.c {
+	top: 450px;
+    right: 560px;
+}
+
+.key.d {
+	top: 450px;
+	right: 518px;
+}
+.key.e {
+	top: 450px;
+	right: 474px;
+}
+.key.f {
+	top: 450px;
+	right: 432px;
+}
+.key.g {
+	top: 450px;
+	right: 390px;
+}
+.key.a {
+	top: 450px;
+	right: 346px;
+}
+.key.b {
+	top: 450px;
+	right: 304px;
+}
+.key.c2 {
+	top: 450px;
+	right: 262px;
+}
+.key.d2 {
+	top: 450px;
+	right: 218px;
+}
+.key.e2 {
+	top: 450px;
+	right: 174px;
+}
+.key.f2 {
+	top: 450px;
+	right: 132px;
+}
+.key.g2 {
+	top: 450px;
+	right: 90px;
+}
+.key.a2 {
+	top: 450px;
+	right: 46px;
+}
+.key.b2 {
+	top: 450px;
+	right: 2px;
+}
+
+
+.playing {
+	transform: scale(1.12);
+}
+
+.key-map-wrapper {
+	position: absolute;
+    right: 0;
+    top: 0;
+    height: 100;
+    background: #111;
+    width: 250px;
+    z-index: 3;
+}
+
+.key-map-wrapper > h2 {
+	color: #fff;
+	font-family: 'Handlee', cursive;
+	margin-bottom: 35px;
+	border-bottom: 1px solid #fff;
+    padding-bottom: 20px;
+}
+
+.key-map-list {
+	list-style: none;
+	color: #fff;
+	text-align: left;
+}
+
+.key-map-list > li {
+	margin-bottom: 25px;
+}
+
+.key-code {
+	color: #444;
+    background-color: #eaeaea;
+    font-size: 1.25em;
+    padding: 5px 10px;
+    border-radius: 4px;
+    border: 3px solid #aaa;
+}
+
+.key-sound {
+	font-size: 1.2em;
+	margin-left: 10px;
+	font-family: 'Handlee', cursive;
+	vertical-align: middle;
+}
