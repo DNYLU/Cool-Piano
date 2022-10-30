@@ -43,11 +43,12 @@
 
 const key = document.getElementById('key');
 const note = document.getElementById('note');
+//SLET
+const history = [];
 
 document.onkeydown = function (e) {
 	key.innerHTML = e.key;
-	
-
+	// Nok ikke den smarteste måde, men den viser hvilken node der hører til hvilken knap
 	if (e.keyCode == 65) {
 		note.innerHTML = "C";
 	} else if (e.keyCode == 83) {
@@ -66,7 +67,7 @@ document.onkeydown = function (e) {
 		note.innerHTML = "C2";
 	} else if (e.keyCode == 76) {
 		note.innerHTML = "D2";
-	} else if (e.keyCode == 192) {
+	} else if (e.keyCode == 186) {
 		note.innerHTML = "E2";
 	} else if (e.keyCode == 222) {
 		note.innerHTML = "F2";
@@ -74,7 +75,15 @@ document.onkeydown = function (e) {
 		note.innerHTML = "G2";
 	} else if (e.keyCode == 80) {
 		note.innerHTML = "A3";
-	} else if (e.keyCode == 221) {
+	} else if (e.keyCode == 219) {
 		note.innerHTML = "B3";
 	} else return;
+
+	array.forEach(note => {
+		history.push(note);
+	});
+
+	//SLET
+	console.log(history);
+
   };
