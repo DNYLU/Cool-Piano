@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>CodePen - JavaScript Drum Kit</title>
+    <title>Cool Piano</title>
     <link rel="stylesheet" href="./styles.css">
 
 </head>
@@ -13,74 +13,22 @@
     <main>
         <section class="main-wrapper">
             <div class="key-map-wrapper">
-                <h2>Key Mapping</h2>
+                <h2><span id="key"></h2>
                 <ul class="key-map-list">
-                    <li>
-                        <!-- kbd = To define keyboard input -->
-                        <kbd class="key-code">A</kbd>
-                        <span class="key-sound">C</span>
+                    <li id="note">
+                        <span id="note"></span>
                     </li>
-                    <li>
-                        <kbd class="key-code">S</kbd>
-                        <span class="key-sound">D</span>
-                    <li>
-                        <li>
-                            <kbd class="key-code">D</kbd>
-                            <span class="key-sound">E</span>
-                        <li>
-                        <kbd class="key-code">F</kbd>
-                        <span class="key-sound">F</span>
-                    </li>
-                    <li>
-                        <kbd class="key-code">G</kbd>
-                        <span class="key-sound">G</span>
-                    </li>
-                    <li>
-                        <kbd class="key-code">H</kbd>
-                        <span class="key-sound">A</span>
-                    </li>
-                    <li>
-                        <kbd class="key-code">J</kbd>
-                        <span class="key-sound">B</span>
-                    </li>
-                    <li>
-                        <kbd class="key-code">K</kbd>
-                        <span class="key-sound">C'</span>
-                    </li>
-                    <li>
-                        <kbd class="key-code">L</kbd>
-                        <span class="key-sound">D'</span>
-                    </li>
-                    <li>
-                        <kbd class="key-code">Æ</kbd>
-                        <span class="key-sound">E'</span>
-                    </li>
-                    <li>
-                        <kbd class="key-code">Ø</kbd>
-                        <span class="key-sound">F'</span>
-                    </li>
-                    <li>
-                        <kbd class="key-code">O</kbd>
-                        <span class="key-sound">G'</span>
-                    </li>
-                    <li>
-                        <kbd class="key-code">P</kbd>
-                        <span class="key-sound">A'</span>
-                    </li>
-                    <li>
-                        <kbd class="key-code">Å</kbd>
-                        <span class="key-sound">B'</span>
-                    </li>
+            
                 </ul>
             </div>
             <h1 class="main-title">Cool Piano</h1>
 
             <!--Piano wrapper-->
             <div class="piano-wrapper">
-                
- 
 
-                    <!--  Keycodes:  https://www.w3.org/2002/09/tests/keys.html-->
+
+
+                <!--  Keycodes:  https://www.w3.org/2002/09/tests/keys.html-->
                 <div data-key="65" class="key c">
                     <kbd>A</kbd>
                 </div>

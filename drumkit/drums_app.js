@@ -1,9 +1,7 @@
 // JavaScript Drum Kit App
 
 {
-	const playingClass = 'playing',
-		crashRide = document.getElementById('crash-ride'),
-		hiHatTop = document.getElementById('hihat-top');
+	
 
 	const animateCrashOrRide = () => {
 		crashRide.style.transform = 'rotate(0deg) scale(1.5)';
@@ -33,7 +31,6 @@
 				break;
 		}
 
-		keyElement.classList.add(playingClass);
 	};
 
 	const removeCrashRideTransition = e => {
@@ -50,8 +47,6 @@
 
 	const removeKeyTransition = e => {
 		if(e.propertyName !== 'transform') return;
-
-		e.target.classList.remove(playingClass)
 	};
 
 	const drumKeys = Array.from(document.querySelectorAll('.key'));
