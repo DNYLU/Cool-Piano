@@ -1,21 +1,19 @@
 // JavaScript Drum Kit App
 {
 	// Dette burde ikke være nødvendigt, men knapperne virker ikke hvis den ikke er her
-	const playingClass = 'playing',
-		crashRide = document.getElementById('crash-ride'),
-		hiHatTop = document.getElementById('hihat-top');
+	const playingClass = 'playing';
 
-	const playSound = e => {
-		const keyCode = e.keyCode,
+	const playSound = e => { 
+		const keyCode = e.keyCode, // Får fat i key-koden
 			// Finder ud af hvilken knap der er blevet trykket på
-			keyElement = document.querySelector(`div[data-key="${keyCode}"]`);
+			keyElement = document.querySelector(`div[data-key="${keyCode}"]`); // data-key="${keyCode}" er en data-attribut
 
 		if (!keyElement) return;
 
 		// Viser hvilken lyd der skal afspilles
 		const audioElement = document.querySelector(`audio[data-key="${keyCode}"]`);
-		audioElement.currentTime = 0;
-		audioElement.play();
+		audioElement.currentTime = 0; // Sætter lyden tilbage til starten
+		audioElement.play(); // Afspiller lyden
 
 		keyElement.classList.add(playingClass);
 	};
@@ -28,12 +26,13 @@
 		e.target.classList.remove(playingClass)
 	};
 
-	// Laver en array af alle divs med classen key
-	const pianoKeys = Array.from(document.querySelectorAll('.key'));
 
-	// Tilføjer eventlistener til alle divs med classen key
-	pianoKeys.forEach(key => {
-		key.addEventListener('transitionend', removeKeyTransition);
+	// Laver en array af alle divs med klassen key
+	const pianoKeys = Array.from(document.querySelectorAll('.key')); 
+
+	// Tilføjer eventlistener til alle divs med klassen key
+	pianoKeys.forEach(key => { // For hver div med klassen key
+		key.addEventListener('transitionend', removeKeyTransition); 
 	});
 
 	// Når der trykkes på en tast, kald funktionen playSound
@@ -47,6 +46,7 @@ const note = document.getElementById('note');
 const history = [];
 
 document.onkeydown = function (e) {
+	// Får fat i key-koden
 	key.innerHTML = e.key;
 	// Nok ikke den smarteste måde, men den viser hvilken node der hører til hvilken knap
 	if (e.keyCode == 65) {
